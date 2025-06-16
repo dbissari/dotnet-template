@@ -24,7 +24,8 @@
 				"ms-dotnettools.csharp",
 				"streetsidesoftware.code-spell-checker-french",
 				"ms-dotnettools.csdevkit",
-				"csharpier.csharpier-vscode"
+				"csharpier.csharpier-vscode",
+				"redhat.vscode-yaml"
 			]
 		}
 	},
