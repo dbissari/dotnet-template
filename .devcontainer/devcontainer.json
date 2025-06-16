@@ -14,7 +14,9 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+				"dotnet.defaultSolution": "dotnet-template.slnx"
+			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"vivaxy.vscode-conventional-commits",
