@@ -7,7 +7,9 @@
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/nikiforovall/devcontainer-features/dotnet-csharpier": "1.0.0"
+		"ghcr.io/nikiforovall/devcontainer-features/dotnet-csharpier:1": {}
+		// Uncomment to add the Docker CLI to the dev container when trixie is supported.
+        // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
 
 	// Configure tool-specific properties.
