@@ -11,9 +11,11 @@ EXPOSE 8081
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:10.0-preview-alpine AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
+WORKDIR /workspace
 COPY ["Directory.Build.props", "./"]
-COPY ["Directory.Packages.props", "./"]
+WORKDIR /workspace/src
+COPY ["src/Directory.Build.props", "./"]
+COPY ["src/Directory.Packages.props", "./"]
 COPY ["src/WebApi/WebApi.csproj", "WebApi/"]
 RUN dotnet restore "WebApi/WebApi.csproj"
 COPY ./src .
