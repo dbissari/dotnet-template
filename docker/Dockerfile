@@ -19,7 +19,7 @@ COPY ["src/Directory.Packages.props", "./"]
 COPY ["src/WebApi/WebApi.csproj", "WebApi/"]
 RUN dotnet restore "WebApi/WebApi.csproj"
 COPY ./src .
-WORKDIR "/src/WebApi"
+WORKDIR /workspace/src/WebApi
 RUN dotnet build "./WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
