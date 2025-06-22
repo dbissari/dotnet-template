@@ -1,0 +1,6 @@
+services:
+  dev-environment:
+    build: .
+    volumes:
+      - ../:/workspaces/dotnet-template:cached
+    command: sleep infinity

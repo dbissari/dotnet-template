@@ -2,12 +2,14 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 {
 	"name": "C# (.NET)",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/dotnet:10.0-preview-trixie-slim",
+	// More info: https://containers.dev/guide/dockerfile
+	// "image": "mcr.microsoft.com/devcontainers/dotnet:10.0-preview-trixie-slim",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev-environment",
+    "workspaceFolder": "/workspaces/dotnet-template",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/nikiforovall/devcontainer-features/dotnet-csharpier:1": {}
 		// Uncomment to add the Docker CLI to the dev container when trixie is supported.
         // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
 	},
@@ -17,7 +19,11 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			"settings": {
-				"dotnet.defaultSolution": "dotnet-template.slnx"
+				"dotnet.defaultSolution": "dotnet-template.slnx",
+                "editor.formatOnSave": true,
+                "[csharp]": {
+                    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+                }
 			},
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
@@ -28,7 +34,9 @@
 				"ms-dotnettools.csdevkit",
 				"csharpier.csharpier-vscode",
 				"redhat.vscode-yaml",
-				"EditorConfig.EditorConfig"
+				"EditorConfig.EditorConfig",
+				"ms-azuretools.vscode-docker",
+				"docker.docker"
 			]
 		}
 	},
