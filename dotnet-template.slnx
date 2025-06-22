@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Infrastructure/Infrastructure.csproj" />
+    <Project Path="src/SharedKernel/SharedKernel.csproj" />
     <Project Path="src/WebApi/WebApi.csproj" />
   </Folder>
 </Solution>
